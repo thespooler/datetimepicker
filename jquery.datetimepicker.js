@@ -1329,6 +1329,7 @@
 							w = _xdsoft_datetime.getWeekOfYear(start);
 
 							classes.push('xdsoft_date');
+							classes.push('xdsoft_day_of_week' + start.getDay());
 
 							if (options.beforeShowDay && $.isFunction(options.beforeShowDay.call)) {
 								customDateSettings = options.beforeShowDay.call(datetimepicker, start);
@@ -1374,7 +1375,7 @@
 								}
 							}
 
-							table += '<td data-date="' + d + '" data-month="' + m + '" data-year="' + y + '"' + ' class="xdsoft_date xdsoft_day_of_week' + start.getDay() + ' ' + classes.join(' ') + '">' +
+							table += '<td data-date="' + d + '" data-month="' + m + '" data-year="' + y + '"' + ' class="' + classes.join(' ') + '">' +
 										'<div>' + d + '</div>' +
 									'</td>';
 
